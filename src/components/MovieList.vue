@@ -18,14 +18,16 @@ onMounted(async () => {
 
 <template>
   <div>
-    <h1>I'm the list of movies</h1>
+    <h1>Futurama</h1>
     <div v-if="error">{{ error }}</div>
-    <ul v-else>
-      <li v-for="m in movies">
+    <div v-else>
+      <div v-for="m in movies" :key="m.id" class="card">
         <MovieSynopsis :movie="m"></MovieSynopsis>
-      </li>
-    </ul>
+      </div>
+    </div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>
